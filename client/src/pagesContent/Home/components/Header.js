@@ -21,10 +21,10 @@ const useStyles = makeStyles(theme => ({
     maxWidth: "250px",
   },
   name: {
-    marginTop: theme.spacing(1),
+    margin: theme.spacing(1, 0),
   },
   date: {
-    marginBottom: theme.spacing(4),
+    margin: theme.spacing(2, 0, 4),
   },
   timer: {
     "& span": {
@@ -32,7 +32,7 @@ const useStyles = makeStyles(theme => ({
     },
   },
   tillTheFair: {
-    marginBottom: "5px",
+    margin: theme.spacing(4, 0, 1),
   },
 }));
 
@@ -89,7 +89,9 @@ const Header = () => {
           <span>{t("buttons.register")}</span>
           <span>{t("buttons.registerBottom")}</span>
         </Button>
-        <h4 className={classes.tillTheFair}>{t("home.tillTheFair")}</h4>
+        <Typography variant="h4" className={classes.tillTheFair}>
+          {t("home.tillTheFair")}
+        </Typography>
         <Countdown
           date={timerDateInMiliseconds}
           daysInHours={false}

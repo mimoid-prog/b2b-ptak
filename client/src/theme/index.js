@@ -1,11 +1,11 @@
-import { createMuiTheme } from "@material-ui/core";
+import { createMuiTheme, responsiveFontSizes } from "@material-ui/core";
 
+import breakpoints from "./breakpoints";
 import palette from "./palette";
 import typography from "./typography";
-import breakpoints from "./breakpoints";
 import overrides from "./overrides";
 
-const theme = createMuiTheme({
+let theme = createMuiTheme({
   palette,
   typography,
   overrides,
