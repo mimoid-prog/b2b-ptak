@@ -1,0 +1,197 @@
+{
+  "global": {
+    "name": "Warsaw Shop Expo",
+    "desc": "Targi Wyposażenia i Akcesoriów dla Obiektów i Sieci Handlowych",
+    "date": "11-13 grudnia 2020",
+    "firstDay": "11 grudnia (sobota) <br/>10:00 - 16:00",
+    "secondDay": "12 grudnia (niedziela) <br/>10:00 - 16:00",
+    "thirdDay": "13 grudnia (poniedziałek) <br/>10:00 - 15:00",
+    "company": "Ptak Warsaw Expo",
+    "street": "al. Katowicka 62",
+    "postal": "05-830",
+    "city": "Nadarzyn"
+  },
+  "home": {
+    "title": "Strona główna",
+    "tillTheFair": "Do targów pozostało:",
+    "timer": {
+      "date": "December 11, 2020",
+      "days": "d",
+      "hours": "g",
+      "minutes": "m",
+      "seconds": "s"
+    },
+    "soldStands": "sprzedanych stoisk",
+    "registeredVisitors": "zarejestrowanych odwiedzających",
+    "partners": "Nasi partnerzy",
+    "aboutTitle": "O Warsaw Shop Expo",
+    "aboutText": "Międzynarodowe Targi Wyposażenia i Akcesoriów dla Obiektów i Sieci Handlowych to nowe spojrzenie na targi o tematyce związanej z kompleksowym zaopatrzeniem sklepów. Warsaw Shop Expo to 3 dniowe święto branży retail, na której będzie można zobaczyć producentów i dystrybutorów: wyposażanie sklepów, maszyn czyszczących, urządzeń gastronomicznych, lad chłodniczych, pieców piekarniczych, urządzeń do przesyłu pieniędzy czy systemów zabezpieczenia towarów.",
+    "thematicZones": {
+      "title": "Strefy tematyczne",
+      "zones": {
+        "0": "Strefa <br/>wyposażenia sklepów",
+        "1": "Strefa <br/>marketingu i usług",
+        "2": "Strefa <br/>higieny",
+        "3": "Strefa <br/>Gastro",
+        "4": "Strefa <br/>czyszczenia",
+        "5": "Strefa <br/>vendingowa",
+        "6": "Strefa <br/>magazynowa",
+        "7": "Strefa <br/>mebli"
+      }
+    },
+    "statistics": {
+      "title": "Poprzednia edycja w liczbach",
+      "stat1": "odwiedzających",
+      "stat2": "wystawców",
+      "stat3": "powierzchnii",
+      "stat4": "wykładów"
+    },
+    "practicalInformation": "Praktyczne <br/>informacje",
+    "openingHours": "Godziny otwarcia:",
+    "road": "Wyznacz trasę"
+  },
+  "forVisitors": {
+    "title": "Dla odwiedzających"
+  },
+  "forExhibitors": {
+    "title": "Dla wystawców"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "address": "Adres"
+  },
+  "exhibitorsCatalog": {
+    "title": "Katalog wystawców",
+    "company": "Firma",
+    "email": "Email",
+    "website": "Strona internetowa"
+  },
+  "exhibitorsCatalogRegistration": {
+    "title": "Katalog wystawców - rejestracja",
+    "desc": "Zapisz się do katalogu wystawców, jeśli chcesz aby odwiedzający targi mogli poznać twoją firmę i usługi."
+  },
+  "exhibitorsCatalogConfirmation": {
+    "title": "Dziękujemy za wpis do katalogu wystawców",
+    "desc": "Twój wpis został wysłany do zespołu targowego. Po akceptacji pojawi się w katalogu wystawców.",
+    "btn": "Zobacz katalog wystawców"
+  },
+  "hostedBuyers": {
+    "title": "Hosted Buyers",
+    "link": "https://warsawexpo.eu/hosted-buyers/"
+  },
+  "hotels": {
+    "title": "Baza hotelowa"
+  },
+  "form": {
+    "company": "Firma",
+    "name": "Imię i nazwisko",
+    "email": "Adres email",
+    "phone": "Numer telefonu",
+    "nip": "NIP",
+    "website": "Strona internetowa",
+    "descPL": "Opis firmy po polsku",
+    "descEN": "Opis firmy po angielsku",
+    "required": "To pole jest wymagane",
+    "invalidEmail": "Niepoprawny adres email",
+    "invalidWebsite": "Adres strony musi być pełny (np. https://www.google.pl)",
+    "max": "Przekroczono maksymalną liczbę znaków",
+    "button": "Wyślij",
+    "consentOne": "Wyrażam zgodę na przetwarzanie przez PWE.",
+    "consentTwo": "Wyrażam zgodę na przetwarzanie przez PWE.",
+    "showLess": "(Mniej)",
+    "showMore": "(Więcej)",
+    "consentOneText": "Wyrażam zgodę na przetwarzanie przez PTAK WARSAW EXPO sp. z o.o. moich danych osobowych, tj. 1) imię i nazwisko; 2) adres e-mail 3) nr telefonu w celach wysyłki wiadomości marketingowych i handlowych związanych z produktami i usługami oferowanymi przez Ptak Warsaw Expo sp. z o.o. za pomocą środków komunikacji elektronicznej lub bezpośredniego porozumiewania się na odległość, w tym na otrzymywanie informacji handlowych, stosownie do treści Ustawy z dnia 18 lipca 2002 r. o świadczeniu usług drogą elektroniczną. Wiem, że wyrażenie zgody jest dobrowolne, lecz konieczne w celu dokonania rejestracji. Zgodę mogę wycofać w każdej chwili.",
+    "consentTwoText": "Wyrażam zgodę na przetwarzanie przez PTAK WARSAW EXPO sp. z o.o. moich danych osobowych, tj. 1) imię i nazwisko; 2) nr telefonu w celach marketingowych związanych z produktami i usługami oferowanymi przez Ptak Warsaw Expo sp. z o.o. za pośrednictwem telekomunikacyjnych urządzeń końcowych w rozumieniu art. 172 ustawy z dnia 16 lipca 2014 r. - Prawo telekomunikacyjne. Wiem, że udzielenie zgody jest dobrowolne, lecz konieczne w celu dokonania rejestracji. Zgodę mogę wycofać w każdej chwili. Wiem, że wyrażenie zgody jest dobrowolne, lecz konieczne w celu dokonania rejestracji. Zgodę mogę wycofać w każdej chwili.",
+    "secured": "Bezpieczny formularz",
+    "error": "Wystąpił błąd. Spróbuj ponownie."
+  },
+  "visitorRegistration": {
+    "title": "Zarejestruj się",
+    "desc": "i odbierz bezpłatne zaproszenie"
+  },
+  "visitorConfirmation": {
+    "title": "Potwierdzenie rejestracji",
+    "greeting": "Dziękujemy za rejestrację!",
+    "greetingText": "Serdecznie witamy w gronie uczestników targów",
+    "info": "Na podany adres email zostało wysłane potwierdzenie z unikalnym kodem QR który upoważnia do wejścia na teren targów. Możesz go też pobrać przyciskiem niżej.",
+    "downloadQR": "Pobierz kod QR",
+    "openingHours": "Godziny otwarcia:",
+    "openingHoursChange": "*godziny otwarcia mogą ulec zmianie",
+    "farewell": "Do zobaczenia na targach!"
+  },
+  "exhibitorRegistration": {
+    "title": "Zostań wystawcą",
+    "desc": "Wypełnij poniższyj formularz, a my skontaktujemy się z tobą, żeby ustalić szczegóły współpracy"
+  },
+  "exhibitorConfirmation": {
+    "title": "Potwierdzenie rejestracji",
+    "greeting": "Dziękujemy za rejestrację!",
+    "info": "Informujemy, że celem ustalenia szczegółów Państwa udziału w targach, skontaktuje się Panią/Panem nasz zepsół.",
+    "info2": "Na podany adres email zostało wysłane potwierdzenie rejestracji.",
+    "openingHours": "Godziny otwarcia:",
+    "openingHoursChange": "*godziny otwarcia mogą ulec zmianie",
+    "farewell": "Do zobaczenia na targach!"
+  },
+  "404": {
+    "title": "Strona nie została odnaleziona",
+    "button": "Wróć na stronę główną"
+  },
+  "footer": {
+    "headingOne": "Targi / Konferencje / Eventy",
+    "headingTwo": "Stolica targów",
+    "listItemOne": "Doświadczony <br/>zespół",
+    "listItemTwo": "Profesjonalizm i <br/>kompleksowość",
+    "listItemThree": "Doskonała <br/>lokalizacja",
+    "listItemFour": "Innowacyjny system <br/>wystawienniczy",
+    "linkOne": "Polityka prywatności",
+    "linkTwo": "Regulamin obiektu"
+  },
+  "buttons": {
+    "register": "Zarejestruj się",
+    "registerBottom": "Odbierz darmowy bilet",
+    "becomeAnExhibitor": "Zostań wystawcą",
+    "oneLineRegister": "Odbierz zaproszenie - teraz!"
+  },
+  "alts": {
+    "partners": {
+      "0": "Gospodarka mięsna logo",
+      "1": "Mistrz branży logo",
+      "2": "Przemysł spożywczy logo",
+      "3": "Problemy jakości logo",
+      "4": "Przegląd piekarski i cukierniczy logo",
+      "5": "Przegląd zbożowo-młynarski logo",
+      "6": "Przemysł Fermentacyjny i Owocowo-Warzywy logo",
+      "7": "foodfakty logo",
+      "8": "Bilans dodatni logo",
+      "9": "Kwartalnik Food Lex logo",
+      "10": "Spomosz logo",
+      "11": "Upemi logo"
+    },
+    "thematicZones": {
+      "0": "Ikonka wózka sklepowego",
+      "1": "Ikonka usług",
+      "2": "Ikonka sprzątaczki",
+      "3": "Ikonka budynków",
+      "4": "Ikonka maszyny sprzątającej",
+      "5": "Ikonka maszyny vendingowej",
+      "6": "Ikonka towarów",
+      "7": "Ikonka sklepu"
+    },
+    "icons": {
+      "pl": "Język polski",
+      "eng": "Język angielski",
+      "visitors": "Ikonka odwiedzających targi",
+      "exhibitors": "Ikonka wystawcy",
+      "area": "Ikonka powierzchnia wystawiennicza",
+      "conference": "Ikonka wykładów i konferencji",
+      "team": "Ikonka zespołu targowego",
+      "graph": "Ikonka wzrostu i kompetencji",
+      "plane": "Ikonka samolotu",
+      "bulb": "Ikonka żarówki",
+      "arrow": "Ikonka strzałki w dół"
+    },
+    "footer": {
+      "img": "Zdjęcie z targów"
+    }
+  }
+}

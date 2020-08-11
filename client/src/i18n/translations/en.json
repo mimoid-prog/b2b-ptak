@@ -1,0 +1,198 @@
+{
+  "global": {
+    "name": "Warsaw Shop Expo",
+    "desc": "Trade Fair of Equipment and Accessories for Commercial Facilities and Networks",
+    "date": "December 11-13, 2020",
+    "firstDay": "December 11 (Saturday) <br/>10:00 - 16:00",
+    "secondDay": "December 12 (Sunday) <br/>10:00 - 16:00",
+    "thirdDay": "December 13 (Monday) <br/>10:00 - 15:00",
+    "company": "Ptak Warsaw Expo",
+    "street": "al. Katowicka 62",
+    "postal": "05-830",
+    "city": "Nadarzyn"
+  },
+  "home": {
+    "title": "Home",
+    "tillTheFair": "It remains to the fair:",
+    "timer": {
+      "date": "December 11, 2020",
+      "days": "d",
+      "hours": "h",
+      "minutes": "m",
+      "seconds": "s"
+    },
+    "soldStands": "of sold stands",
+    "registeredVisitors": "registered visitors",
+    "partners": "Our partners",
+    "aboutTitle": "About Warsaw Shop Expo",
+    "aboutText": "The International Trade Fair of Equipment and Accessories for Commercial Facilities and Networks is a new look at trade fairs related to comprehensive store supply. The Warsaw Shop Expo is a 3-day holiday of the retail industry, where you will see producers and distributors: furnishing stores, cleaning machines, catering equipment, refrigerated counters, bakery ovens, money transfer devices and goods security systems.",
+    "thematicZones": {
+      "title": "Thematic zones",
+      "zones": {
+        "0": "Store equipment <br/>zone",
+        "1": "Marketing and services <br/>zone",
+        "2": "Hygiene <br/>zone",
+        "3": "Gastro <br/>zone",
+        "4": "Cleaning <br/>zone",
+        "5": "Vending <br/>zone",
+        "6": "Warehouse <br/>zone",
+        "7": "Furniture <br/>zone"
+      }
+    },
+    "statistics": {
+      "title": "Previous edition in numbers",
+      "stat1": "visitors",
+      "stat2": "exhibitors",
+      "stat3": "of surface",
+      "stat4": "lectures"
+    },
+    "practicalInformation": "Practical <br/>information",
+    "openingHours": "Opening hours:",
+    "road": "Location"
+  },
+  "forVisitors": {
+    "title": "For visitors"
+  },
+  "forExhibitors": {
+    "title": "For exhibitors"
+  },
+  "contact": {
+    "title": "Contact",
+    "address": "Address"
+  },
+  "exhibitorsCatalog": {
+    "title": "Exhibitors catalog",
+    "company": "Company",
+    "email": "Email",
+    "website": "Website"
+  },
+  "exhibitorsCatalogRegistration": {
+    "title": "Exhibitors catalog - registration",
+    "desc": "Register to the exhibitors' catalog if you want the visitors let to know your company and services."
+  },
+  "exhibitorsCatalogConfirmation": {
+    "title": "Thank you for registering to the exhibitors' catalog",
+    "desc": "Your entry has been sent to the exhibition team. After acceptance, it will appear in exhibitors catalog.",
+    "btn": "See exhibitors' catalog"
+  },
+  "hostedBuyers": {
+    "title": "Hosted Buyers",
+    "link": "https://warsawexpo.eu/en/hosted-buyers/"
+  },
+  "hotels": {
+    "title": "Hotels"
+  },
+  "form": {
+    "company": "Company",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "nip": "TAX ID",
+    "website": "Website",
+    "descPL": "Company description in polish",
+    "descEN": "Company description in english",
+    "required": "This field is required",
+    "invalidEmail": "Invalid email address",
+    "invalidWebsite": "Website must be a valid URL (eg. https://www.google.com)",
+    "max": "Maximum number of characters exceeded",
+    "button": "Submit",
+    "consentOne": "I agree to the processing by PWE.",
+    "consentTwo": "I agree to the processing by PWE.",
+    "showLess": "(Less)",
+    "showMore": "(More)",
+    "consentOneText": "I agree to the processing by PTAK WARSAW EXPO sp. z o.o. of my personal data, i.e. 1) name and surname; 2) e-mail address; 3) telephone number for the purposes of sending marketing and commercial messages related to products and services offered by Ptak Warsaw Expo sp. z o.o. by means of electronic communication or direct remote communication, including receiving commercial information, pursuant to the Act of 18 July 2002 on the provision of services by electronic means. I know that the consent is voluntary but necessary for registration. I can withdraw my consent at any time.",
+    "consentTwoText": "I agree to the processing by PTAK WARSAW EXPO sp. z o.o. of my personal data, i.e. 1) name and surname; 2) telephone number for marketing purposes related to products and services offered by Ptak Warsaw Expo sp. z o.o. by means of terminal telecommunications equipment within the meaning of article 172 of the Act of 16 July 2014 - Telecommunications law. I know that consent is voluntary, but necessary for registration. I can withdraw my consent at any time. I know that the consent is voluntary but necessary for registration. I can withdraw my consent at any time.",
+    "secured": "Secured form",
+    "error": "An error occured. Try again."
+  },
+  "visitorRegistration": {
+    "title": "Register",
+    "desc": "and get a free ticket"
+  },
+  "visitorConfirmation": {
+    "title": "Registration confirmation",
+    "greeting": "Thank you for the registration!",
+    "greetingText": "Welcome to the trade fair",
+    "info": "A confirmation has been sent to the email address provided with a unique QR code that authorizes you to enter the fair. You can also download it by clicking the button below.",
+    "downloadQR": "Download QR code",
+    "openingHours": "Opening hours:",
+    "openingHoursChange": "*opening hours may change",
+    "farewell": "See you at the fair!"
+  },
+  "exhibitorRegistration": {
+    "title": "Become an Exhibitor",
+    "desc": "Please fill out the form below and our dedicated team will contact you regarding the possible cooperation"
+  },
+  "exhibitorConfirmation": {
+    "title": "Registration confirmation",
+    "greeting": "Thank you for the registration!",
+    "info": "Please be advised that in order to determine the details of your participation in the fair, you will be contacted by our team.",
+    "info2": "A confirmation of registration was sent to the e-mail address provided.",
+    "downloadQR": "Download QR code",
+    "openingHours": "Opening hours:",
+    "openingHoursChange": "*opening hours may change",
+    "farewell": "See you at the fair!"
+  },
+  "404": {
+    "title": "Page not found",
+    "button": "Homepage"
+  },
+  "footer": {
+    "headingOne": "Trade fairs / Conferences / Events",
+    "headingTwo": "Trade fair capital",
+    "listItemOne": "Experienced <br/>team",
+    "listItemTwo": "Professionalism and <br/>comprehensiveness",
+    "listItemThree": "Perfect <br/>location",
+    "listItemFour": "Innovative exhibition <br/>system",
+    "linkOne": "Privacy policy",
+    "linkTwo": "Regulations"
+  },
+  "buttons": {
+    "register": "Register",
+    "registerBottom": "Get a free ticket",
+    "becomeAnExhibitor": "Become an Exhibitor",
+    "oneLineRegister": "Receive the invitation - now!"
+  },
+  "alts": {
+    "partners": {
+      "0": "Gospodarka mięsna logotype",
+      "1": "Mistrz branży logotype",
+      "2": "Przemysł spożywczy logotype",
+      "3": "Problemy jakości logotype",
+      "4": "Przegląd piekarski i cukierniczy logotype",
+      "5": "Przegląd zbożowo-młynarski logotype",
+      "6": "Przemysł Fermentacyjny i Owocowo-Warzywy logotype",
+      "7": "foodfakty logotype",
+      "8": "Bilans dodatni logotype",
+      "9": "Kwartalnik Food Lex logotype",
+      "10": "Spomosz logotype",
+      "11": "Upemi logotype"
+    },
+    "thematicZones": {
+      "0": "Icon of",
+      "1": "Icon of",
+      "2": "Icon of",
+      "3": "Icon of",
+      "4": "Icon of",
+      "5": "Icon of",
+      "6": "Icon of",
+      "7": "Icon of"
+    },
+    "icons": {
+      "pl": "Język polski",
+      "eng": "Język angielski",
+      "visitors": "Ikonka odwiedzających targi",
+      "exhibitors": "Ikonka wystawcy",
+      "area": "Ikonka powierzchnia wystawiennicza",
+      "conference": "Ikonka wykładów i konferencji",
+      "team": "Ikonka zespołu targowego",
+      "graph": "Ikonka wzrostu i kompetencji",
+      "plane": "Ikonka samolotu",
+      "bulb": "Ikonka żarówki",
+      "arrow": "Icon of the bottom arrow"
+    },
+    "footer": {
+      "img": "Photo of the trade fair"
+    }
+  }
+}

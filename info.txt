@@ -1,0 +1,10 @@
+  "resolutions": {
+    "gatsby-plugin-sharp/sharp": "^0.22.1",
+    "gatsby-transformer-sharp/sharp": "^0.22.1",
+    "gatsby-plugin-manifest/sharp": "^0.22.1"
+  }
+
+  wersje z 0.22.1
+      "gatsby-plugin-manifest": "2.2.7",
+      "gatsby-plugin-sharp": "2.2.14",
+      "gatsby-transformer-sharp": "2.2.8",
