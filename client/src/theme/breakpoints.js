@@ -1,9 +1,7 @@
-const values = {
-  sm: "640px",
-  md: "768px",
-  lg: "1024px",
-  xl: "1280px",
-  xxl: "1440px",
+export default {
+  sm: 640,
+  md: 768,
+  lg: 1024,
+  xl: 1280,
+  xxl: 1440,
 };
-
-export default values;

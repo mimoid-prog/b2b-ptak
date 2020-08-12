@@ -2,7 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { Box, Container, Button, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
-import { LocalizedLink as Link } from "components/links/LocalizedLink";
+import { LocalizedLink } from "components";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
     root: {
       position: "sticky",
       top: 0,
-      zIndex: 99,
+      zIndex: 19,
     },
     inner: {
       display: "flex",
@@ -50,7 +50,7 @@ const StickyBar = () => {
           <Box className={classes.btnBox}>
             <Button
               variant="contained"
-              component={Link}
+              component={LocalizedLink}
               to="/visitor-registration"
             >
               {t("buttons.oneLineRegister")}

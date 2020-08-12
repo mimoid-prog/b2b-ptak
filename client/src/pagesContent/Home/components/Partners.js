@@ -4,7 +4,10 @@ import { Box, Container, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 
 const useStyles = makeStyles(theme => ({
-  root: {},
+  root: {
+    textAlign: "center",
+    padding: theme.spacing(2, 0),
+  },
 }));
 
 const Partners = () => {
@@ -14,7 +17,7 @@ const Partners = () => {
   return (
     <Box className={classes.root}>
       <Container>
-        <Typography variant="h3">{t("home.partners")}</Typography>
+        <Typography variant="h4">{t("home.partners")}</Typography>
         <Box className={classes.inner}></Box>
       </Container>
     </Box>

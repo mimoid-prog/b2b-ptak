@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Box, Container, Button, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 import Countdown from "react-countdown";
-import { LocalizedLink as Link } from "components/links/LocalizedLink";
+import { LocalizedLink, Navbar } from "components";
 
 /*images*/
 import logo from "images/logo.png";
@@ -21,7 +21,7 @@ const useStyles = makeStyles(theme => ({
     maxWidth: "250px",
   },
   name: {
-    margin: theme.spacing(1, 0),
+    margin: theme.spacing(1, 0, 0),
   },
   date: {
     margin: theme.spacing(2, 0, 4),
@@ -32,7 +32,21 @@ const useStyles = makeStyles(theme => ({
     },
   },
   tillTheFair: {
-    margin: theme.spacing(4, 0, 1),
+    margin: theme.spacing(4, 0, 0.5),
+  },
+  [theme.breakpoints.up("lg")]: {
+    logo: {
+      maxWidth: "300px",
+    },
+    name: {
+      margin: theme.spacing(2, 0, 0),
+    },
+    date: {
+      margin: theme.spacing(3, 0, 4),
+    },
+    timer: {
+      fontSize: "1.2rem",
+    },
   },
 }));
 
@@ -73,23 +87,24 @@ const Header = () => {
   return (
     <Box className={classes.root}>
       <Container>
+        <Navbar />
         <img src={logo} alt="logo" className={classes.logo} />
         <Typography variant="h1" className={classes.name}>
           {t("global.name")}
         </Typography>
-        <Typography variant="h2" className={classes.date}>
+        <Typography variant="h3" component="h2" className={classes.date}>
           {t("global.date")}
         </Typography>
         <Button
           variant="contained"
           color="primary"
-          component={Link}
+          component={LocalizedLink}
           to="/visitor-registration"
         >
           <span>{t("buttons.register")}</span>
           <span>{t("buttons.registerBottom")}</span>
         </Button>
-        <Typography variant="h4" className={classes.tillTheFair}>
+        <Typography variant="h6" component="h3" className={classes.tillTheFair}>
           {t("home.tillTheFair")}
         </Typography>
         <Countdown

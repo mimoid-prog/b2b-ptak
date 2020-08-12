@@ -1,4 +1,4 @@
-import { createMuiTheme, responsiveFontSizes } from "@material-ui/core";
+import { createMuiTheme } from "@material-ui/core";
 
 import breakpoints from "./breakpoints";
 import palette from "./palette";
@@ -9,7 +9,9 @@ let theme = createMuiTheme({
   palette,
   typography,
   overrides,
-  breakpoints,
+  breakpoints: {
+    values: breakpoints,
+  },
 });
 
 export default theme;
