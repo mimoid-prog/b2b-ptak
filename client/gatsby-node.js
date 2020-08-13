@@ -1,4 +1,6 @@
 const path = require(`path`);
+
+const locales = require("./src/i18n/locales");
 const pages = require("./src/i18n/pages");
 
 exports.onCreatePage = ({ page, actions }) => {

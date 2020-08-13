@@ -26,7 +26,6 @@ const withI18next = () => Comp => {
     addResources = pageContext => {
       if (pageContext) {
         const { locale: lng } = pageContext;
-        console.log(lng + "xd");
         const translation = resources[lng].translation;
 
         if (!this.i18n.hasResourceBundle(lng, "translation")) {
