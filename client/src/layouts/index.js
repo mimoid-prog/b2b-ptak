@@ -15,6 +15,9 @@ const useStyles = makeStyles({
         overflow: "auto",
       },
     },
+    ul: {
+      padding: 0,
+    },
   },
 });
 

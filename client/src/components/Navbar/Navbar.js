@@ -1,7 +1,13 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { makeStyles } from "@material-ui/styles";
-import { Box, Container, Button, IconButton } from "@material-ui/core";
+import {
+  Box,
+  Container,
+  Button,
+  IconButton,
+  SwipeableDrawer,
+} from "@material-ui/core";
 import ptakLogo from "images/ptak-white.png";
 import { LocalizedLink, LanguageLink } from "components";
 import {
@@ -31,16 +37,10 @@ const useStyles = makeStyles(theme => ({
     width: "120px",
   },
   navigation: {
-    width: "100%",
-    height: "100%",
-    position: "fixed",
-    right: 0,
-    top: 0,
-    backgroundColor: "#1c1c1c",
-    zIndex: 29,
-    transform: props => (props.isActive ? "translateX(0)" : "translateX(100%)"),
-    transition: "transform 0.4s ease",
-    overflowY: "auto",
+    minHeight: "100%",
+    width: "80vw",
+    background: "#1c1c1c",
+    padding: theme.spacing(0, 3),
   },
   navList: {
     display: "flex",
@@ -71,7 +71,7 @@ const useStyles = makeStyles(theme => ({
   navLink: {
     color: theme.palette.white,
     textDecoration: "none",
-    fontSize: "18px",
+    fontSize: "16px",
   },
   flagIcon: {
     width: "30px",
@@ -110,10 +110,10 @@ const Navbar = () => {
 
   const pageLanguages = pages[pageSlug];
 
-  const [isActive, setIsActive] = useState(false);
+  const [isDrawer, setIsDrawer] = useState(false);
   const [showSubmenu, setShowSubmenu] = useState(submenusObject);
 
-  const changeIsActive = val => {
+  const changeIsDrawer = val => {
     if (val) document.body.classList.add("menu-active");
     else {
       document.body.classList.remove("menu-active");
@@ -123,13 +123,21 @@ const Navbar = () => {
       });
     }
 
-    setIsActive(val);
+    setIsDrawer(val);
   };
 
   const classes = useStyles({
-    isActive,
+    isDrawer,
     showSubmenu,
   });
+
+  const toggleDrawer = e => {
+    if (e && e.type === "keydown" && (e.key === "Tab" || e.key === "Shift")) {
+      return;
+    }
+
+    setIsDrawer(!isDrawer);
+  };
 
   return (
     <Box className={classes.root}>
@@ -140,20 +148,18 @@ const Navbar = () => {
           alt="Ptak Warsaw Expo Logo"
         />
       </LocalizedLink>
-      <IconButton
-        onClick={() => changeIsActive(true)}
-        className={classes.openBtn}
-      >
+      <IconButton onClick={e => toggleDrawer(e)} className={classes.openBtn}>
         <MenuIcon fontSize="large" style={{ color: "white" }} />
       </IconButton>
-      <nav className={classes.navigation}>
-        <Container>
+      <SwipeableDrawer
+        anchor="right"
+        open={isDrawer}
+        onClose={toggleDrawer}
+        onOpen={toggleDrawer}
+        className={classes.drawer}
+      >
+        <nav className={classes.navigation}>
           <ul className={classes.navList}>
-            <li className={classes.navListItem}>
-              <IconButton onClick={() => changeIsActive(false)}>
-                <CloseIcon fontSize="large" style={{ color: "white" }} />
-              </IconButton>
-            </li>
             {routes.map((route, i) => (
               <li className={classes.navListItem} key={i}>
                 {route.submenu ? (
@@ -274,8 +280,8 @@ const Navbar = () => {
               ))}
             </li>
           </ul>
-        </Container>
-      </nav>
+        </nav>
+      </SwipeableDrawer>
     </Box>
   );
 };
