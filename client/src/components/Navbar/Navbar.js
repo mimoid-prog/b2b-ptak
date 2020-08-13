@@ -23,6 +23,10 @@ const useStyles = makeStyles(theme => ({
     justifyContent: "space-between",
     alignItems: "center",
   },
+  ptakUfiLogoBox: {
+    display: "flex",
+    alignItems: "center",
+  },
   ptakUfiLogo: {
     width: "120px",
   },
@@ -92,6 +96,11 @@ const useStyles = makeStyles(theme => ({
       borderBottom: "none",
     },
   },
+  [theme.breakpoints.up("xl")]: {
+    openBtn: {
+      display: "none",
+    },
+  },
 }));
 
 const Navbar = () => {
@@ -103,7 +112,6 @@ const Navbar = () => {
 
   const [isActive, setIsActive] = useState(false);
   const [showSubmenu, setShowSubmenu] = useState(submenusObject);
-  console.log(showSubmenu);
 
   const changeIsActive = val => {
     if (val) document.body.classList.add("menu-active");
@@ -125,14 +133,17 @@ const Navbar = () => {
 
   return (
     <Box className={classes.root}>
-      <LocalizedLink to="/">
+      <LocalizedLink to="/" className={classes.ptakUfiLogoBox}>
         <img
           src={ptakLogo}
           className={classes.ptakUfiLogo}
           alt="Ptak Warsaw Expo Logo"
         />
       </LocalizedLink>
-      <IconButton onClick={() => changeIsActive(true)}>
+      <IconButton
+        onClick={() => changeIsActive(true)}
+        className={classes.openBtn}
+      >
         <MenuIcon fontSize="large" style={{ color: "white" }} />
       </IconButton>
       <nav className={classes.navigation}>
