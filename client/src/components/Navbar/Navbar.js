@@ -3,26 +3,24 @@ import { useTranslation } from "react-i18next";
 import { makeStyles } from "@material-ui/styles";
 import { Box, Container, Button, IconButton, Drawer } from "@material-ui/core";
 import ptakLogo from "images/ptak-white.png";
-import { LocalizedLink, LanguageLink } from "components";
+import { LocalizedLink } from "components";
 import {
   Menu as MenuIcon,
   Close as CloseIcon,
   ExpandMore as ExpandMoreIcon,
 } from "@material-ui/icons";
-import LocaleContext from "src/localeContext";
-import UKFlag from "images/icons/uk.svg";
-import PLFlag from "images/icons/pl.svg";
 import routes from "./routes";
 import { submenusObject } from "./routes";
-import { red } from "@material-ui/core/colors";
-
-const pages = require("i18n/pages");
+import Languages from "./Languages";
 
 const useStyles = makeStyles(theme => ({
   root: {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
+  },
+  desktopNav: {
+    display: "none",
   },
   ptakUfiLogoBox: {
     display: "flex",
@@ -61,19 +59,10 @@ const useStyles = makeStyles(theme => ({
       alignItems: "center",
     },
   },
-  flagIconButton: {
-    marginRight: theme.spacing(2),
-    "&:last-child": {
-      marginRight: 0,
-    },
-  },
   navLink: {
     color: theme.palette.white,
     textDecoration: "none",
     fontSize: "16px",
-  },
-  flagIcon: {
-    width: "30px",
   },
   submenuBox: {
     maxHeight: 0,
@@ -91,17 +80,74 @@ const useStyles = makeStyles(theme => ({
   },
   submenuItem: {
     margin: theme.spacing(0, 0, 2),
-    "&:last-child": {
-      borderBottom: "none",
-    },
   },
   closeBtnBox: {
     display: "flex",
     justifyContent: "flex-end",
   },
+  [theme.breakpoints.up("xs")]: {
+    navigation: {
+      width: "360px",
+    },
+  },
   [theme.breakpoints.up("xl")]: {
     openBtn: {
       display: "none",
+    },
+    drawer: {
+      display: "none",
+    },
+    desktopNav: {
+      display: "block",
+    },
+    navigation: {
+      width: "auto",
+    },
+    navList: {
+      flexDirection: "row",
+      alignItems: "center",
+      minHeight: "auto",
+      padding: 0,
+    },
+    navListItem: {
+      margin: theme.spacing(0, 2.5, 0, 0),
+      "&:hover > div": {
+        display: "block",
+      },
+    },
+    navLink: {
+      fontSize: "16px",
+    },
+    becomeAnExhibitorBtn: {
+      fontSize: "16px",
+    },
+    submenuBox: {
+      display: "none",
+      maxHeight: "none",
+      height: "auto",
+      marginTop: 0,
+      padding: theme.spacing(2, 0, 0),
+      position: "absolute",
+      zIndex: 9999,
+    },
+    submenuList: {
+      background: theme.palette.black,
+      padding: theme.spacing(1),
+    },
+    submenuItem: {
+      margin: 0,
+      display: "flex",
+      alignItems: "center",
+      "& a": {
+        display: "block",
+        whiteSpace: "nowrap",
+        padding: theme.spacing(0.8, 1.5),
+        fontSize: "16px",
+
+        "&:hover": {
+          color: "rgba(255, 255, 255, 0.5)",
+        },
+      },
     },
   },
 }));
@@ -109,10 +155,6 @@ const useStyles = makeStyles(theme => ({
 const Navbar = () => {
   const { t } = useTranslation();
   const classes = useStyles();
-
-  const { locale, pageSlug } = React.useContext(LocaleContext);
-
-  const pageLanguages = pages[pageSlug];
 
   const [isDrawer, setIsDrawer] = useState(false);
   const [showSubmenu, setShowSubmenu] = useState(submenusObject);
@@ -246,36 +288,99 @@ const Navbar = () => {
               </Button>
             </li>
             <li>
-              {Object.keys(pageLanguages).map((lang, i) => (
-                <React.Fragment key={i}>
-                  {lang !== locale && pages[pageSlug][lang].active === true && (
-                    <IconButton
-                      component={LanguageLink}
-                      lang={lang}
-                      className={classes.flagIconButton}
-                    >
-                      {lang === "pl" && (
-                        <img
-                          src={PLFlag}
-                          className={classes.flagIcon}
-                          alt="flag"
-                        />
-                      )}
-                      {lang === "en" && (
-                        <img
-                          src={UKFlag}
-                          className={classes.flagIcon}
-                          alt="flag"
-                        />
-                      )}
-                    </IconButton>
-                  )}
-                </React.Fragment>
-              ))}
+              <Languages />
             </li>
           </ul>
         </nav>
       </Drawer>
+      <Box className={classes.desktopNav}>
+        <nav className={classes.navigation}>
+          <ul className={classes.navList}>
+            {routes.map((route, i) => (
+              <li className={classes.navListItem} key={i}>
+                {route.submenu ? (
+                  <>
+                    <span>
+                      {route.internal ? (
+                        <>
+                          <LocalizedLink
+                            to={route.link}
+                            className={classes.navLink}
+                          >
+                            {t(route.title)}
+                          </LocalizedLink>
+                          <ExpandMoreIcon
+                            fontSize="small"
+                            style={{ color: "white" }}
+                          />
+                        </>
+                      ) : (
+                        <>
+                          <a href={t(route.link)} className={classes.navLink}>
+                            {t(route.title)}
+                          </a>
+                        </>
+                      )}
+                    </span>
+                    <Box className={classes.submenuBox}>
+                      <ul className={classes.submenuList}>
+                        {route.submenu.map((item, j) => (
+                          <li className={classes.submenuItem} key={j}>
+                            {item.internal ? (
+                              <LocalizedLink
+                                to={item.link}
+                                className={classes.navLink}
+                              >
+                                {t(item.title)}
+                              </LocalizedLink>
+                            ) : (
+                              <a
+                                href={t(item.link)}
+                                className={classes.navLink}
+                              >
+                                {t(item.title)}
+                              </a>
+                            )}
+                          </li>
+                        ))}
+                      </ul>
+                    </Box>
+                  </>
+                ) : (
+                  <>
+                    {route.internal ? (
+                      <LocalizedLink
+                        to={route.link}
+                        className={classes.navLink}
+                      >
+                        {t(route.title)}
+                      </LocalizedLink>
+                    ) : (
+                      <a href={t(route.link)} className={classes.navLink}>
+                        {t(route.title)}
+                      </a>
+                    )}
+                  </>
+                )}
+              </li>
+            ))}
+            <li className={classes.navListItem}>
+              <Button
+                variant="contained"
+                color="primary"
+                className={classes.becomeAnExhibitorBtn}
+                component={LocalizedLink}
+                to="/exhibitor-registration"
+              >
+                {t("buttons.becomeAnExhibitor")}
+              </Button>
+            </li>
+            <li>
+              <Languages />
+            </li>
+          </ul>
+        </nav>
+      </Box>
     </Box>
   );
 };

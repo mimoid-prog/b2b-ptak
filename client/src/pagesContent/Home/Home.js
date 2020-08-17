@@ -2,6 +2,7 @@ import React from "react";
 import SEO from "utils/SEO";
 import { useTranslation } from "react-i18next";
 import { Header, StickyBar, Partners } from "./components";
+import { Footer } from "components";
 import { Box } from "@material-ui/core";
 
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
       <Header />
       <StickyBar />
       <Partners />
+      <Footer />
     </Box>
   );
 };
