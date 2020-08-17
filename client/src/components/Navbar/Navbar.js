@@ -1,13 +1,7 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { makeStyles } from "@material-ui/styles";
-import {
-  Box,
-  Container,
-  Button,
-  IconButton,
-  SwipeableDrawer,
-} from "@material-ui/core";
+import { Box, Container, Button, IconButton, Drawer } from "@material-ui/core";
 import ptakLogo from "images/ptak-white.png";
 import { LocalizedLink, LanguageLink } from "components";
 import {
@@ -20,6 +14,7 @@ import UKFlag from "images/icons/uk.svg";
 import PLFlag from "images/icons/pl.svg";
 import routes from "./routes";
 import { submenusObject } from "./routes";
+import { red } from "@material-ui/core/colors";
 
 const pages = require("i18n/pages");
 
@@ -37,10 +32,14 @@ const useStyles = makeStyles(theme => ({
     width: "120px",
   },
   navigation: {
-    minHeight: "100%",
+    height: "100%",
     width: "80vw",
-    background: "#1c1c1c",
     padding: theme.spacing(0, 3),
+  },
+  drawer: {
+    "& .MuiPaper-root": {
+      background: theme.palette.veryDarkGray,
+    },
   },
   navList: {
     display: "flex",
@@ -48,7 +47,7 @@ const useStyles = makeStyles(theme => ({
     textAlign: "left",
     listStyle: "none",
     margin: 0,
-    padding: theme.spacing(3, 0, 4),
+    padding: theme.spacing(2, 0, 4),
   },
   navListItem: {
     marginBottom: theme.spacing(4),
@@ -96,6 +95,10 @@ const useStyles = makeStyles(theme => ({
       borderBottom: "none",
     },
   },
+  closeBtnBox: {
+    display: "flex",
+    justifyContent: "flex-end",
+  },
   [theme.breakpoints.up("xl")]: {
     openBtn: {
       display: "none",
@@ -105,6 +108,7 @@ const useStyles = makeStyles(theme => ({
 
 const Navbar = () => {
   const { t } = useTranslation();
+  const classes = useStyles();
 
   const { locale, pageSlug } = React.useContext(LocaleContext);
 
@@ -112,24 +116,6 @@ const Navbar = () => {
 
   const [isDrawer, setIsDrawer] = useState(false);
   const [showSubmenu, setShowSubmenu] = useState(submenusObject);
-
-  const changeIsDrawer = val => {
-    if (val) document.body.classList.add("menu-active");
-    else {
-      document.body.classList.remove("menu-active");
-      setShowSubmenu({
-        forVisitors: false,
-        forExhibitors: false,
-      });
-    }
-
-    setIsDrawer(val);
-  };
-
-  const classes = useStyles({
-    isDrawer,
-    showSubmenu,
-  });
 
   const toggleDrawer = e => {
     if (e && e.type === "keydown" && (e.key === "Tab" || e.key === "Shift")) {
@@ -151,7 +137,7 @@ const Navbar = () => {
       <IconButton onClick={e => toggleDrawer(e)} className={classes.openBtn}>
         <MenuIcon fontSize="large" style={{ color: "white" }} />
       </IconButton>
-      <SwipeableDrawer
+      <Drawer
         anchor="right"
         open={isDrawer}
         onClose={toggleDrawer}
@@ -160,6 +146,14 @@ const Navbar = () => {
       >
         <nav className={classes.navigation}>
           <ul className={classes.navList}>
+            <li className={`${classes.navListItem} ${classes.closeBtnBox}`}>
+              <IconButton
+                onClick={e => toggleDrawer(e)}
+                className={classes.openBtn}
+              >
+                <CloseIcon fontSize="large" style={{ color: "white" }} />
+              </IconButton>
+            </li>
             {routes.map((route, i) => (
               <li className={classes.navListItem} key={i}>
                 {route.submenu ? (
@@ -281,7 +275,7 @@ const Navbar = () => {
             </li>
           </ul>
         </nav>
-      </SwipeableDrawer>
+      </Drawer>
     </Box>
   );
 };

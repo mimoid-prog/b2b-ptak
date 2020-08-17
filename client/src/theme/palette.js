@@ -6,8 +6,10 @@ const black = "#000000";
 export default {
   white,
   black,
+  verLightGray: "#eaeaea",
   lightGray: "#eaeaea",
   darkGray: "#777777",
+  veryDarkGray: "#1c1c1c",
   primary: {
     contrastText: white,
     main: "#3aad6c",

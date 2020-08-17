@@ -1,5 +1,5 @@
 import React from "react";
-import SEO from "utils/seo";
+import SEO from "utils/SEO";
 import { useTranslation } from "react-i18next";
 import { Header, StickyBar, Partners } from "./components";
 import { Box } from "@material-ui/core";
