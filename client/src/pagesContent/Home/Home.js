@@ -1,7 +1,7 @@
 import React from "react";
 import SEO from "utils/SEO";
 import { useTranslation } from "react-i18next";
-import { Header, StickyBar, Partners } from "./components";
+import { Header, StickyBar, Partners, Practical } from "./components";
 import { Footer } from "components";
 import { Box } from "@material-ui/core";
 
@@ -14,6 +14,7 @@ const Home = () => {
       <Header />
       <StickyBar />
       <Partners />
+      <Practical />
       <Footer />
     </Box>
   );
