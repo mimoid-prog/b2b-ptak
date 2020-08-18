@@ -30,7 +30,7 @@ export default {
     fontWeight: 700,
     margin: "1.2rem 0",
     "@media (min-width: 1024px)": {
-      fontSize: "1.8rem",
+      fontSize: "1.6rem",
     },
   },
   h5: {
